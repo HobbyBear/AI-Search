@@ -37,6 +37,7 @@ public class BeamSearch {
         Node start = ire.getStartNode();
         start.setVisited(true);
         BeamSearch bf = new BeamSearch();
+        System.out.println("BeamSearch ");
         bf.search(start);
     }
 }

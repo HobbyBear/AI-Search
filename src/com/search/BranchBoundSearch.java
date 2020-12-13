@@ -32,6 +32,7 @@ public class BranchBoundSearch {
         Node start = ire.getStartNode();
         start.setVisited(true);
         BranchBoundSearch hc = new BranchBoundSearch();
+        System.out.println("BrancBoundSearch ");
         hc.search(start);
     }
 

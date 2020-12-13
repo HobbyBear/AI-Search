@@ -49,6 +49,7 @@ public class ASearch {
         Node start = ire.getStartNode();
         start.setVisited(true);
         ASearch bf = new ASearch();
+        System.out.println("A* search ");
         bf.search(start);
     }
 }

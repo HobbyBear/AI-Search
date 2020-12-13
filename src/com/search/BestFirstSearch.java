@@ -38,6 +38,7 @@ public class BestFirstSearch {
         Node start = ire.getStartNode();
         start.setVisited(true);
         BestFirstSearch bf = new BestFirstSearch();
+        System.out.println("BestFirstSearch ");
         bf.search(start);
     }
 }

@@ -10,7 +10,7 @@ public class HillClimbSearch {
         Queue<Node> queue = new PriorityQueue<Node>(10, sorter);
 
         if (node.isGoalNode()) {
-            path(node);
+            System.out.println("find success");
             return;
         }
         Node[] children = node.children();
@@ -41,17 +41,6 @@ public class HillClimbSearch {
         }
     }
 
-    private void path(Node node) {
-        List<Node> path = new ArrayList<Node>();
-        while (node.getParent() != null) {
-            path.add(node);
-            node = node.getParent();
-        }
-        path.add(node);
-        Collections.reverse(path);
-        System.out.println("Path: " + path + ". Distance of " + distance(path));
-    }
-
     private int distance(List<Node> path) {
         int distance = 0;
         for (int i = 0; i < path.size(); i++) {
@@ -65,6 +54,8 @@ public class HillClimbSearch {
         Node start = ire.getStartNode();
         start.setVisited(true);
         HillClimbSearch hc = new HillClimbSearch();
+        System.out.println("HillClimSearch ");
+        System.out.println("Visiting " + start.getNodeName());
         hc.search(start);
     }
 
