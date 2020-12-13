@@ -12,8 +12,9 @@ public class BranchBoundSearch {
 
         while (!queue.isEmpty()) {
             Node G = queue.poll();
+            System.out.println("Visiting " + G.getNodeName() + "\t");
             if (G.isGoalNode()) {
-                path(G);
+                System.out.println("find success");
                 return;
             }
             Node[] children = G.children();
@@ -23,17 +24,6 @@ public class BranchBoundSearch {
 
         }
 
-    }
-
-    private void path(Node node) {
-        List<Node> path = new ArrayList<Node>();
-        while (node.getParent() != null) {
-            path.add(node);
-            node = node.getParent();
-        }
-        path.add(node);
-        Collections.reverse(path);
-        System.out.println("Path: " + path);
     }
 
 

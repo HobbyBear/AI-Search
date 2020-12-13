@@ -14,8 +14,9 @@ public class ASearch {
 
             node = queue.poll();
             node.setVisited(true);
+            System.out.println("Visiting " + node.getNodeName());
             if (node.isGoalNode()) {
-                path(node);
+                System.out.println("find success");
                 return;
             } else {
 

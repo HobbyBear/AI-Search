@@ -11,12 +11,11 @@ public class BeamSearch {
 
         queue.addFirst(node);
         while (!queue.isEmpty()) {
-            System.out.println(queue);
             LinkedList<Node> levelNodeList = new LinkedList<>();
             while (!queue.isEmpty()) {
                 Node removeNode = queue.removeFirst();
                 if (removeNode.isGoalNode()) {
-                    System.out.println("Reached goal node " + removeNode.getNodeName());
+                    System.out.println("find success");
                     return;
                 }
                 System.out.println("Visiting " + removeNode.getNodeName() + "\t");

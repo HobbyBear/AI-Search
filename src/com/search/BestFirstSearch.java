@@ -15,11 +15,11 @@ public class BestFirstSearch {
         while (!queue.isEmpty()) {
 
             node = queue.poll();
+            System.out.println("Visiting " + node.getNodeName() + "\t");
             closed.add(node);
 
             if (node.isGoalNode()) {
-                path(node);
-                System.out.println(closed);
+                System.out.println("find success");
                 return;
             } else {
 
@@ -30,17 +30,6 @@ public class BestFirstSearch {
                 }
             }
         }
-    }
-
-    private void path(Node node) {
-        List<Node> path = new ArrayList<Node>();
-        while (node.getParent() != null) {
-            path.add(node);
-            node = node.getParent();
-        }
-        path.add(node);
-        Collections.reverse(path);
-        System.out.println("Path: " + path);
     }
 
 

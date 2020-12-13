@@ -23,16 +23,18 @@ public class HillClimbSearch {
 
         Node bestChild = queue.poll();
 
-        if (bestChild == null){
+        if (bestChild == null) {
             System.out.println("find fail");
             return;
         }
+
+        System.out.println("Visiting " + bestChild.getNodeName());
 
         if (!bestChild.isLeaf()) {
             search(bestChild);
         } else {
             if (bestChild.isGoalNode()) {
-                path(bestChild);
+               System.out.println("find success");
             } else {
                 System.out.println("find fail");
             }
